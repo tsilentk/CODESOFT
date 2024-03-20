@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODSOFT</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        #main{
+            height: 100%;
+            width: 100%;
+            padding-top: 8%;
+        }
+        a{
+            text-decoration: none;
+        }
+        header{
+            height: 15%;
+            width: 100%;
+            background: transparent;
+            backdrop-filter: blur(2px);
+            display: flex;
+            justify-content: space-around;
+            z-index: 100;
+            position: fixed;
+            top: 0%;
+        }
+        header #logo{
+            height: 100%;
+            width: 25%;
+            background-image: url(logo.png);
+            background-position: center;
+            background-size: cover;
+        }
+        header nav{
+            display: flex;
+            width: 65%;
+            justify-content: space-around;
+            padding-top: 4%;
+        }
+        header nav a{
+            color:rgb(13, 13, 41);
+            transition: all ease 1s;
+        }
+        header nav a h5:hover{
+            color:brown;
+            border-bottom: 1px solid brown;
+        }
+
+        #view1{
+            background-image: url(whitebg.gif);
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+            text-align: center;
+            padding-top: 10%;
+        }
+        #view1 h1{
+            color: brown;
+            font-weight: 600;
+            font-size: 300%;
+        }
+        #view1 h1 span{
+            font-weight: 900;   
+        }
+        #view1 h3{
+            color:rgb(13, 13, 41);
+            font-weight: 100;
+            font-size: 200%;
+        }
+        #view1 a button{
+            color:white;
+            font-size: 150%;
+            padding: 1% 3%;
+            border-radius: 50px;
+            border:1px solid black ;
+            background-color: rgb(13, 13, 41);
+            transition: all ease 0.5s;
+        }
+        #view1 a button:hover{
+            cursor: pointer;
+            color: black;
+            background-color: white;
+        }
+        #view2{
+            height: 70%;
+            padding: 5%;
+        }
+        #view3{
+            height: 100%;
+            text-align: center;
+            padding: 2%;
+            
+
+        }
+        #view3 h2{
+            color:brown;
+            text-shadow: 0 3px gray;
+        }
+        #view3 #inner{
+            display: flex;
+            padding: 2%;
+            height: 90%;
+        }
+        #view3 #inner #gif{
+            width: 50%;
+            height: 100%;
+            background-image: url(https://assets.zyrosite.com/Aq20eV79zLfpXV6b/bb375cdd655184ca2715ac5059e73651-YX4ZEeZEvbhrMMZa.gif);
+            background-position: center;
+            background-size: cover;
+        }
+        #view3 #inner #info{
+            width: 50%;
+            height: 100%;
+            padding: 5%;
+            text-align: start;
+            background: transparent;
+            backdrop-filter: blur(5px);
+            border-radius: 30px;
+            box-shadow: 0 0 5px gray,0 0 10px gray,0 0 20px gray;
+
+        }
+        #view3 #inner #info h2{
+            color: navy;
+            text-shadow:none;
+        }
+        #view3 #inner #info a button{
+            color:white;
+            font-size: 150%;
+            padding: 1% 3%;
+            border-radius: 50px;
+            border:1px solid black ;
+            background-color: rgb(13, 13, 41);
+            position: relative;
+            left: 30%;
+            transition: all ease 0.5s;
+
+        }
+        #view3 #inner #info a button:hover{
+            cursor: pointer;
+            color: black;
+            background-color: white;
+        }
+        #view4{
+            height: 80%;
+            display: flex;
+            padding: 2%;
+         
+        }
+        #view4 #gif{
+            width: 50%;
+            height: 100%;
+            background-image: url(https://assets.zyrosite.com/Aq20eV79zLfpXV6b/web-development-2-YX4ZEeEEnwI13r0K.gif);
+            background-position: center;
+            background-size: cover;
+        }
+        #view4 #info{
+            width: 50%;
+            height: 100%;
+            padding: 7%;
+            text-align: start;
+            background: transparent;
+            backdrop-filter: blur(5px);
+            border-radius: 30px;
+            box-shadow: 0 0 5px gray,0 0 10px gray,0 0 20px gray;
+
+        }
+        #view5{
+            height: 80%;
+            display: flex;
+            padding: 2%;
+       
+
+        }
+        #view5 #info{
+            width: 50%;
+            height: 100%;
+            padding: 7%;
+            text-align: start;
+            background: transparent;
+            backdrop-filter: blur(5px);
+            border-radius: 30px;
+            box-shadow: 0 0 5px gray,0 0 10px gray,0 0 20px gray;
+
+        }
+        #view5 #info a button{
+            color:white;
+            font-size: 150%;
+            padding: 1% 3%;
+            border-radius: 50px;
+            border:1px solid black ;
+            background-color: rgb(13, 13, 41);
+            position: relative;
+            left: 30%;
+            transition: all ease 0.5s;
+
+        }
+        #view5 #info a button:hover{
+            cursor: pointer;
+            color: black;
+            background-color: white;
+        }
+        #view5 #gif{
+            width: 50%;
+            height: 100%;
+            background-image: url(https://assets.zyrosite.com/Aq20eV79zLfpXV6b/ecom1.5-AGBrlQWV28Tk33nJ.gif);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #view6{
+            padding: 2%;
+            justify-content: space-around;
+            display: grid;
+            text-align: center;
+            grid-template-columns: 30% 30% 30%;
+
+        }
+        #view6 #ip{
+            background: transparent;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 5px gray,0 0 10px gray,0 0 20px gray;
+            border-radius: 20px;
+            margin-top: 5%;
+        }
+        #view6 #ip img{
+            height: 50%;
+            width: 100%;
+            border-radius: 20px;
+        }
+        #view6 #ip a button{
+            color:white;
+            font-size: 150%;
+            padding: 1% 3%;
+            border-radius: 50px;
+            border:1px solid black ;
+            background-color: rgb(13, 13, 41);
+            
+            transition: all ease 0.5s;
+
+        }
+        #view6 #ip a button:hover{
+            cursor: pointer;
+            color: black;
+            background-color: white;
+        }
+        #view7{
+            height: 50%;
+            text-align: center;
+            padding: 3%;
+        }
+        #view7 #inner{
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-around;
+            text-shadow: 0 0 10px gray,0 0 20px gray;
+        }
+        #view7 #inner #bx{
+            color:brown;
+        }
+        #view8{
+            display: flex;
+            height: 80%;
+        }
+        #view8 #info{
+            height: 100%;
+            width: 50%;
+            text-align: center;
+            padding: 5%;
+        }
+        #view8 #gif{
+            width: 50%;
+            height: 100%;
+            background-image: url(https://assets.zyrosite.com/Aq20eV79zLfpXV6b/colorlessbitesizedkob-size_restricted-dWxMw6VeVnhwvlpy.gif);
+            background-position: center;
+            background-size: cover;
+        }
+        #view9{
+            background-color: aliceblue;
+            height: 90%;
+            display:flex;
+            padding: 2%;
+        }
+        #view9 #info{
+            height: 100%;
+            width: 50%;
+            text-align: center;
+            padding: 5%;
+        }
+        #view9 #info a button{
+            color:white;
+            font-size: 150%;
+            padding: 1% 3%;
+            border-radius: 50px;
+            border:1px solid black ;
+            background-color: rgb(13, 13, 41);
+            transition: all ease 0.5s;
+
+        }
+        #view9 #info a button:hover{
+            cursor: pointer;
+            color: black;
+            background-color: white;
+        }
+        #view9 #gif{
+            border-radius: 80px;
+            width: 50%;
+            height: 100%;
+            background-image:url(https://images.unsplash.com/photo-1573164574572-cb89e39749b4?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1lZXRpbmd8ZW58MHx8MHx8fDA%3D);
+            background-position: center;
+            background-size: cover;
+        }
+        #view10{
+            background-color: rgb(13, 13, 41) ;
+            height: 50%;
+            display: grid;
+            place-items: center;
+            color:white;
+            text-align: center;
+            font-weight:bolder;
+        }
+        #view11{
+            height: 110%;
+            display: grid;
+            place-items: center;
+            text-align: center
+        }
+        #view11 form{
+            width: 20%;
+            height: 100%;
+            padding: 1%;
+            text-align: start;  
+        }
+        #view11 form input{
+            font-size: 115%;  
+        }
+        #view11 form a button{
+            color:black;
+            font-size: 150%;
+            padding: 1% 3%;
+            border-radius: 5px;
+            border:1px solid black ;
+            background-color: rgb(14, 214, 104);
+            transition: all ease 0.5s;
+            position: relative;
+            left: 30%;
+
+        }
+        #view11 form a button:hover{
+            cursor: pointer;
+            color: white;
+            background-color:rgb(8, 95, 47);
+        }
+        footer{
+            background-color: aliceblue;
+            height: 80%;
+        }
+        footer #top{
+            height:50%;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            padding: 2%;
+        }
+        footer #top a{
+            color: rgb(48, 46, 46);
+        }
+        footer #bottom{
+            height: 50%;
+            text-align: center;
+            padding: 2%;
+        }
+        footer #bottom #inner{
+            
+            height: 30%;
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            left: 25%;
+        }
+        footer #bottom #inner a h1 {
+            color: black;
+        }
+
+
+
+
+        
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+        <header>
+            <div id="logo"></div>
+            <nav>
+                <a href="#"><h5>HOME</h5></a>
+                <a href="#"><H5>SERVICES</H5></a>
+                <a href="#"><H5>PRODUCTS</H5></a>
+                <a href="#"><H5>INTERNSHIPS</H5></a>
+                <a href="#"><H5>JOBS</H5></a>
+                <a href="#"><H5>VERIFICATION</H5></a>
+                <a href="#"><h5>ABOUT US</h5></a>
+                <a href="#"><h5>CONTACT US</h5></a>
+            </nav>
+        </header>
+
+        <div id="view1">
+            <H1>Take Your Career to the Next Level with <span>CodSoft</span></H1>
+            <br><br>
+            <h3>Join Our Exciting Internship Journey</h3>
+            <br><br>
+            <a href="#"><button>Apply</button></a>
+        </div>
+
+        <div id="view2">
+            <h2>Who We Are</h2>
+            <br><br><br>
+            <p><b>CodSoft</b> are IT services and IT consultancy  that specializes in creating innovative solutions for businesses. We are passionate about technology and believe in the power of software to transform the world. Our internship program is just one of the ways in which we are investing in the future of the industry</p>
+            <br><br>
+            <p>At <b>CodSoft</b>, we believe practical knowledge is the key to success in the tech industry. Our aim is to help students lacking basic skills by offering hands-on learning through live projects and real-world examples.</p>
+        </div>
+
+        <div id="view3">
+            <h2>We Provide All Exclusive services For Clients</h2>
+            <div id="inner">
+                <div id="gif"></div>
+                <div id="info">
+                    <h2>We build websites and web applications.</h2>
+                    <br><br>
+                    <p>
+                        Today, every business should have a website.
+                        <br><br>
+                        No matter how small or large your business, having a website is must have at this time.
+                        <br><br>
+                        Having a website help you to maintain your online presence.
+                    </p>
+                    <br><br>
+                    <a href="#"><button>Contact Us</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="view4">
+            <div id="gif"></div>
+            <div id="info">
+                <h2>E-Commerce Development.</h2>
+                <p>
+                    Our talented web development team has years of experience building websites from small to large.
+                    <br><br>
+                    We deliver projects with 100% user satisfaction.
+                    <br><br>
+                    Whatever functionality you need for the web, we will implement it.
+                </p>
+            </div>
+            
+        </div>
+
+        <div id="view5">
+            <div id="info">
+                <h2>Need website for your business?</h2>
+                <p>
+                    Want to sell your products online?
+                    <br>
+                    We often develop Ecommerce for businesses who want to sell their products or services online.
+                    <br><br>
+                    Let's move your products towards online...
+                </p>
+                <br><br>
+                <a href="#"><button>Contact Us</button></a>
+            </div>
+            <div id="gif"></div>
+             
+        </div>
+
+        <h2 style="margin-left: 40%;">INTERNSHIP POSITION</h2>
+
+        <div id="view6">
+
+            
+    
+            <div id="ip">
+                <img src="https://assets.zyrosite.com/Aq20eV79zLfpXV6b/web_developing-dJoGejvV7nI9KNlO.gif" alt="">
+                <br>
+                <h3>Web Development</h3>
+                <br>
+                <p>
+                    web development internship that provides practical work experience and an introduction to crafting and enhancing web-based systems. This opportunity offers engaging challenges and real-world projects, allowing you to gain hands-on experience in the dynamic fields of web and app development. Join our award-winning innovation team and kickstart your journey to success in a supportive and enriching environment.
+                </p>
+                <br>
+                <a href="#"><button>Apply</button></a>
+            </div>
+
+            <div id="ip">
+                <img src="https://assets.zyrosite.com/Aq20eV79zLfpXV6b/mob-dev-AGBrMO8XElc08jln.gif" alt="">
+                <br>
+                <h3>Android Development</h3>
+                <br>
+                <p>
+                    Android, the user-friendly open-source operating system, has transformed the way we access internet applications and carry out important tasks on our mobile devices. At CODSOFT, we understand the growing preference for mobile usage and offer the ideal starting point for your app development journey. Discover the simplicity of creating your first app with us and unlock a world of endless possibilities in the realm of mobile innovation.
+                </p>
+                <br>
+                <a href="#"><button>Apply</button></a>
+            </div>
+
+            <div id="ip">
+                <img src="https://assets.zyrosite.com/Aq20eV79zLfpXV6b/data-science-2-mP4XPq0y3wUKory9.gif" alt="">
+                <br>
+                <h3>Data Science</h3>
+                <br>
+                <p>
+                    Remote Data Science Internships Are A Unique Chance To Gain Experience In The Midst Of The Virtual Workforce While Remaining Immersed In One Of The Top Organizations In The Field. Data Analysis Internships Are Some Of The Most Competitive And Popular Within The Broader Data Science Field.
+                </p>
+                <br>
+                <a href="#"><button>Apply</button></a>
+            </div>
+
+            <div id="ip">
+                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=227,h=168,fit=crop/Aq20eV79zLfpXV6b/java_projects_for_beginners-AGBrMZgjljfZV2EE.jpg" alt="">
+                <br>
+                <h3>Java Programming</h3>
+                <br>
+                <p>
+                    Become a Java programming master from the convenience of your own home and unlock incredible job prospects with our certification program. Join our comprehensive 4-week internship program, where you'll learn everything from web application development to deployment using Java Build a solid foundation for your career with hands-on training and real-world application in a supportive and collaborative environment.
+                </p>
+                <br>
+                <a href="#"><button>Apply</button></a>
+            </div>
+
+            <div id="ip">
+                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=227,h=168,fit=crop/Aq20eV79zLfpXV6b/istock-1276643671-A1agppkaKqi8zzvj.jpg" alt="">
+                <br>
+                <h3>C++ Programming</h3>
+                <br>
+                <p>
+                    Gain mastery in C++ programming from the comfort of your home and open doors to amazing job opportunities with our certification program. Enroll in our intensive 4-week internship, where you'll acquire knowledge in web application development and deployment using C++. Establish a strong base for your career and real-world implementation within a supportive and collaborative setting.
+                </p>
+                <br>
+                <a href="#"><button>Apply</button></a>
+            </div>
+
+            <div id="ip">
+                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=166,h=163,fit=crop/Aq20eV79zLfpXV6b/images-m7VEv066lPuoGGkY.png" alt="">
+                <br>
+                <h3>Python Programming</h3>
+                <br>
+                <p>
+                    Join our 4-week comprehensive internship program and master the fundamentals of programming in Python from the comfort of your own home. Gain the skills and knowledge to apply for exciting job opportunities in the field. In this program, you will learn everything from web development to the deployment of Python-based web applications. Get certified and enhance your career prospects. Don't miss this opportunity to excel in Python programming!
+                </p>
+                <br>
+                <a href="#"><button>Apply</button></a>
+            </div>
+
+            <div id="ip">
+                <img src="https://assets.zyrosite.com/Aq20eV79zLfpXV6b/870a2f0a426751eac1fc9cefcd97be78-m7VE6evebnsJWr3w.gif" alt="">
+                <br>
+                <h3>UI/UX Design</h3>
+                <br>
+                <p>
+                    Gain mastery in UI/UX Design from the comfort of your home and open doors to amazing job opportunities with our certification program. Enroll in our intensive 4-week internship, where you'll acquire knowledge in web application development and deployment . Establish a strong base for your career and real-world implementation within a supportive and collaborative setting.
+                </p>
+                <br>
+                <a href="#"><button>Apply</button></a>
+            </div>
+
+            <div id="ip">
+                <img src="https://assets.zyrosite.com/Aq20eV79zLfpXV6b/9d7b99_dfcb8e88751c4cecb7ac677976976ec8~mv2-mP4Xa8xEPPTLEoVx.gif" alt="">
+                <br>
+                <h3>Artificial intelligence</h3>
+                <br>
+                <p>
+                    Gain mastery in Artificial intelligence from the comfort of your home and open doors to amazing job opportunities with our certification program. Enroll in our intensive 4-week internship, where you'll acquire knowledge in web application development and deployment . Establish a strong base for your career and real-world implementation within a supportive and collaborative setting.
+                </p>
+                <br>
+                <a href="#"><button>Apply</button></a>
+            </div>
+
+            <div id="ip">
+                <img src="https://assets.zyrosite.com/Aq20eV79zLfpXV6b/creative-m5KWqZZQ0ZF2RNjg.gif" alt="">
+                <br>
+                <h3>Machine learning</h3>
+                <br>
+                <p>
+                    Gain mastery in Machine learning from the comfort of your home and open doors to amazing job opportunities with our certification program. Enroll in our intensive 4-week internship, where you'll acquire knowledge in web application development and deployment . Establish a strong base for your career and real-world implementation within a supportive and collaborative setting.
+                </p>
+                <br>
+                <a href="#"><button>Apply</button></a>
+            </div>
+        </div>
+
+        <div id="view7">
+            <h1>Our Growing Online Community</h1>
+            <h6>Connect with a community of individuals who share your vision, unlocking boundless opportunities and fostering personal growth as you pursue success.</h6>
+            <div id="inner">
+
+                <div id="bx">
+                    <h1>190K+</h1>
+                    <h6>LinkedIn community</h6>
+                </div>
+
+                <div id="bx">
+                    <h1>74K+</h1>
+                    <h6>Telegram community</h6>
+                </div>
+
+                <div id="bx">
+                    <h1>18K+</h1>
+                    <h6>Instagram community</h6>
+                </div>
+                <div id="bx">
+                    <h1>5.6K+</h1>
+                    <h6>Facebook community</h6>
+                </div>
+            </div>
+        </div>
+
+        <div id="view8">
+            <div id="info">
+                <br><br><br><br><br>
+                <h2>Unlock Your Creativity</h2>
+                <br><br>
+                <p>
+                    At CodSoft, we believe that creativity is the heart of innovation. Our internship program is designed to help you tap into your creative potential and bring your ideas to life. Through our hands-on approach, you'll learn how to develop new products, design user interfaces, and build software that solves real-world problems. Join us today and discover your inner artist.
+                </p>
+            </div>
+            <div id="gif"></div>
+        </div>
+
+        <div id="view9">
+            <div id="gif"></div>
+            <div id="info">
+                <h5>AND LET'S NOT FORGET</h5>
+                <br>
+                <h2>Collaborate with the Best</h2>
+                <br><br>
+                <p>
+                    At CodSoft, we believe that collaboration is the key to success. Our internship program is designed to help you build lifelong relationships with fellow interns, mentors, and industry experts. We're proud to have a diverse community of passionate individuals who are committed to pushing the boundaries of technology. Whether you're interested in front-end development, back-end development, or UI/UX design, we have something for everyone. Join us today and become a part of our vibrant community!
+                </p>
+                <br><br>
+                <a href="#"><button>Join</button></a>
+            </div>
+        </div>
+
+        <div id="view10">
+            <h1>Unlock Your Full Potential with <br>CodSoft</h1>
+        </div>
+
+        <div id="view11">
+            <h1>Get in Touch</h1>
+            <form action="">
+                <h5>First Name*</h5>
+                <input type="text" required>
+                <br><br>
+                <h5>Last Name</h5>
+                <input type="text">
+                <br><br>
+                <h5>Your Email*</h5>
+                <input type="email" required>
+                <br><br>
+                <h5>Message*</h5>
+                <textarea cols="30" rows="10"></textarea>
+                <br><br>
+                <a href="#"><button>Submit</button></a>
+            </form>
+            
+        </div>
+
+        <footer>
+            <div id="top">
+                <div id="t1">
+                    <h3>Useful Links</h3>
+                    <br>
+                    <a href="">Home</a>
+                    <br><br>
+                    <a href="">About</a>
+                    <br><br>
+                    <a href="">Services</a>
+                    <br><br>
+                    <a href="">Internships</a>
+
+                </div>
+
+                <div id="t2">
+                    <h3>Legal Links</h3>
+                    <br>
+                    <a href="">Privacy policy</a>
+                    <br><br>
+                    <a href="">Refund policy</a>
+                    <br><br>
+                    <a href="">Terms and conditions</a>
+                </div>
+
+                <div id="t3">
+                    <h3>Contact Info</h3>
+                    <br>
+                    <h4>Lokenath bose garden lane Kolkata,West Bengal </h4>
+                    <br>
+                    <a href="#"><h5>contact@codsoft.in</h5></a>
+                </div>
+            </div>
+            <div id="bottom">
+                <h2>Follow Us</h2>
+                <br>
+                <div id="inner">
+                    <a href=""><h1><i class="ri-instagram-fill"></i></h1></a>
+                    <a href=""><h1><i class="ri-mail-fill"></i></h1></a>
+                    <a href=""><h1><i class="ri-linkedin-box-fill"></i></h1></a>
+                    <a href=""><h1><i class="ri-telegram-fill"></i></h1></a>
+                </div>
+                <h3>Copyright ©2023 <b>CODSOFT</b>. All Rights Reserved Designed By Team <b>CODSOFT</b></h3>
+
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
